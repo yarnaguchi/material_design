@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.708cab50.chunk.js",
-    "main.js.map": "/static/js/main.708cab50.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.91b4900b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.91b4900b.js.map",
-    "static/css/2.86a5f087.chunk.css": "/static/css/2.86a5f087.chunk.css",
-    "static/js/2.0d1d393c.chunk.js": "/static/js/2.0d1d393c.chunk.js",
-    "static/js/2.0d1d393c.chunk.js.map": "/static/js/2.0d1d393c.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.86a5f087.chunk.css.map": "/static/css/2.86a5f087.chunk.css.map",
-    "static/js/2.0d1d393c.chunk.js.LICENSE.txt": "/static/js/2.0d1d393c.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
+    "main.js": "/material_design/static/js/main.708cab50.chunk.js",
+    "main.js.map": "/material_design/static/js/main.708cab50.chunk.js.map",
+    "runtime-main.js": "/material_design/static/js/runtime-main.e8f406bd.js",
+    "runtime-main.js.map": "/material_design/static/js/runtime-main.e8f406bd.js.map",
+    "static/css/2.ee12e3e2.chunk.css": "/material_design/static/css/2.ee12e3e2.chunk.css",
+    "static/js/2.0d1d393c.chunk.js": "/material_design/static/js/2.0d1d393c.chunk.js",
+    "static/js/2.0d1d393c.chunk.js.map": "/material_design/static/js/2.0d1d393c.chunk.js.map",
+    "index.html": "/material_design/index.html",
+    "static/css/2.ee12e3e2.chunk.css.map": "/material_design/static/css/2.ee12e3e2.chunk.css.map",
+    "static/js/2.0d1d393c.chunk.js.LICENSE.txt": "/material_design/static/js/2.0d1d393c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/material_design/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.91b4900b.js",
-    "static/css/2.86a5f087.chunk.css",
+    "static/js/runtime-main.e8f406bd.js",
+    "static/css/2.ee12e3e2.chunk.css",
     "static/js/2.0d1d393c.chunk.js",
     "static/js/main.708cab50.chunk.js"
   ]
