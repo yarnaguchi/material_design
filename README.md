@@ -1,46 +1,176 @@
-# Getting Started with Create React App
+### 環境作成
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Create React App](https://github.com/facebook/create-react-app)
 
-## Available Scripts
+```bash
+npx create-react-app material_design --template typescript
+```
 
-In the project directory, you can run:
+- [ESlint](https://github.com/eslint/eslint)
 
-### `yarn start`
+```bash
+yarn add eslint --dev
+yarn run eslint --init
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+yarn add -D eslint-plugin-react-hooks
+```
 
-### `yarn test`
+edit eslint config
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```JavaScript
+{
+  "env": {
+    // ...
+    node: true,
+  },
+  "extends": [
+    // ...
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    // ...
+    "react-hooks"
+  ],
+  "rules": {
+    // ...
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}
+```
 
-### `yarn build`
+- [ESLint-plugin-React](https://github.com/yannickcr/eslint-plugin-react)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn add -D eslint-plugin-react
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+edit eslint config
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```JSON
+{
+  "extends": [
+    // ...
+    "eslint:recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+  },
+}
+```
 
-### `yarn eject`
+- [Prettier](https://github.com/prettier/prettier)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn add --dev --exact prettier
+echo {}> .prettierrc.json
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+edit .prettierrc.json
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```JSON
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "jsxSingleQuote": true
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+edit package.json
 
-## Learn More
+```JavaScript
+{
+  "scripts": {
+    // ...
+    "prettier": "prettier --check . !build/**/* !public/**/*",
+    "prettier:fix": "prettier --write . !build/**/* !public/**/*",
+  }
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Material-UI](https://github.com/mui-org/material-ui)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn add @material-ui/core @material-ui/icons fontsource-roboto
+```
+
+React エントリポイントでインポート
+
+```TypeScript
+import 'fontsource-roboto';
+```
+
+- [gh-pages](https://github.com/tschaub/gh-pages)
+
+```bash
+yarn add -D gh-pages
+```
+
+edit package.json
+
+```JSON
+{
+  "homepage": "https://yamaguchiryuta.github.io/material_design/",
+  "scripts": {
+    "deploy": "yarn run build & gh-pages -d build"
+  }
+}
+```
+
+### CI/CD
+
+.github/workflows/gh-pages-deploy.yml
+
+```YAML
+name: Deploy
+on:
+  push:
+    branches: [master]
+  # pull_request:
+  #   branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+          architecture: x64
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build React App
+        run: yarn build
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+```
+
+---
+
+---
+
+### Deploy
+
+- MaterialDesign [page](https://yamaguchiryuta.github.io/material_design/)
