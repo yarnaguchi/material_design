@@ -1,3 +1,6 @@
+[![Test](https://github.com/YamaguchiRyuta/material_design/actions/workflows/test.yml/badge.svg)](https://github.com/YamaguchiRyuta/material_design/actions/workflows/test.yml)
+[![Deploy](https://github.com/YamaguchiRyuta/material_design/actions/workflows/gh-pages-deploy.yml/badge.svg)](https://github.com/YamaguchiRyuta/material_design/actions/workflows/gh-pages-deploy.yml)
+
 ### 環境作成
 
 - [Create React App](https://github.com/facebook/create-react-app)
