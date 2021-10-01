@@ -1,0 +1,2 @@
+(this.webpackJsonpmaterial_design=this.webpackJsonpmaterial_design||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var i=n(1),r=n.n(i),s=n(3),c=n.n(s),a=n(0),d=function(){return Object(a.jsx)("div",{children:"MaterialDesign"})};n(9);c.a.render(Object(a.jsx)(r.a.StrictMode,{children:Object(a.jsx)(d,{})}),document.getElementById("root"))}},[[10,1,2]]]);
+//# sourceMappingURL=main.17630ed7.chunk.js.map
