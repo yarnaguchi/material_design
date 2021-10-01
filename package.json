@@ -2,6 +2,8 @@
   "name": "material_design",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
+  "homepage": "https://yamaguchiryuta.github.io/material_design/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",

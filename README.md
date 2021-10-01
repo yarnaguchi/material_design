@@ -59,7 +59,7 @@ yarn add -D eslint-plugin-react
 
 edit eslint config
 
-```JSON
+```javascript
 {
   "extends": [
     // ...
